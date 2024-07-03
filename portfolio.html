@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5; 
+        }
+
+        header {
+            background-color:rgb(168, 168, 155);
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            margin-top: 3%;
+            display: flex;
+            margin-left: 5%;
+        }
+
+        a {
+            padding: 0 10px;
+            text-decoration: none;
+            color: #333; 
+        }
+
+        a:hover {
+            color:black; 
+            background-color: #f0a5a5;
+            
+        }
+
+        .intro-section {
+            background-color: rgb(248, 246, 244);
+            padding: 50px;
+            margin-bottom: 50px;
+            overflow: hidden;
+            display: inline-block;
+            background-image: url('');
+            background-repeat: no-repeat;
+            background-size:cover;
+            
+            
+        }
+
+        img {
+            height: 500px;
+            width: 300px;
+            margin-top: 1%;
+            margin-right: 50px;
+            border-radius: 0px; 
+            display: inline-block;
+            float: right;
+        }
+
+        h1, h3 {
+            color: #333;
+        }
+
+        button {
+            padding: 1%;
+            background-color: #544b4b;
+            border: 1px solid #333; 
+            cursor: pointer;
+            color: #fff; 
+        }
+        #about{
+            margin: 0px;
+            background-image: url('bgabut.avif');
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: inline-block;
+            padding-left: 30px;
+            width: auto;
+            padding-bottom: 30px;
+        }
+
+        button:hover {
+            background-color: #836363; 
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color:rgb(168, 168, 155);
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        #projects-section{
+            margin-left: 20px;
+        }
+        #contact-section{
+            margin-left: 20px;
+            margin-bottom: 80px;
+        }
+        #int{
+            width: 50%;
+            padding-top: 70px;
+            padding-left: 50px;
+        }
+        h1{
+            font-family: Montserrat;
+            font-size: 40px;
+            
+        }
+        .name{
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        #me{
+            display: block;
+            font-weight: 200;
+            
+        }
+        #container {
+            width: 100%;
+            margin: 0 auto;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            background-image: url('recommend.jpg');
+            
+           
+        }
+        .recommendations {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .recommendation-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 20px;
+            padding: 20px;
+            width: 30%;
+            box-sizing: border-box;
+        }
+        .recommendation-card h3 {
+            margin-top: 0;
+        }
+        .recommendation-card p {
+            font-style: italic;
+            color: #555;
+        }
+        #projects-section{
+            background-color: rgb(240, 233, 233);
+            padding: 20px;
+            margin: 0px;
+            text-align: justify;
+            background-image: url('projectsbg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #contact-section{
+            background-image:url('contbg.jpg') ;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0px;
+            padding:20px;
+            padding-bottom: 100px;
+            background-position:bottom;
+        }
+        #skillset{
+            background-color: antiquewhite;
+            background-image: url('skills.jpg');
+        }
+        hr{
+            width:50%;
+            float: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        .form-group button {
+            background-color: #384d38;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #b5d0b5;
+        }
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-top: 50px;
+        }
+       
+       .nav-bar{
+        display: flex;
+        justify-content:flex-start;
+        gap:40px;
+        align-items: center;
+       } 
+       .navbar {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #545859;
+            color: white;
+        }
+        .profile-info {
+            display: flex;
+            flex-direction: column;
+        }
+        .profile-info span {
+            margin: 2px 0;
+        }
+        #skills {
+    text-align: center;
+    padding: 50px 0;
+}
+#homeicon{
+    height: 40px;
+    width: 40px;
+    margin-bottom: 50px;
+    
+}
+
+#skills h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.skill {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 150px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+}
+
+.skill i {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.skill p {
+    font-size: 1.2em;
+    margin: 0;
+    color: #333;
+}
+#img1{
+    height: 30px;
+    width:30px;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1000;
+}
+
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.popup p {
+    margin: 0;
+    font-size: 1.2em;
+}
+       
+       
+    </style>
+</head>
+<body>
+    <header>
+            <div class="nav-bar">
+                <nav class="navbar">
+                    <div class="profile-info">
+                        <span>Name: Gaddam Aswini</span>
+                        <span>Email: gaddamaswini142@.com</span>
+                        <span>Phone:9618534142</span>
+                    </div>
+                </nav>
+            <a href="#about">About me</a>
+            <a href="#skillset">Skills</a>
+            <a href="#projects-section">Projects</a>
+            <a href="#container">Recommendations</a>
+            <a href="#contact-section">Contact</a>
+    </div>
+        <div id="social">
+           
+        </div>
+    </header>
+    
+    <div class="intro-section">
+        <div id="im">
+
+        <img src="profilepic.jpg" alt="Photograph of Aswini Gaddam, an undergraduate student at Sree Vidyanikethan Engineering College">
+        </div>
+        <div id="int">
+            <div class="name">
+            <h1>Hey I am</h1>
+            <h1>Aswini Gaddam</h1>
+            </div>
+            <h3>A Bit About Me</h3>
+            <p>
+                I am an undergraduate student at Sree Vidyanikethan Engineering College,
+                Computer Science and Systems Engineering Department.
+                I am actively working on learning full-stack web development.
+            </p>
+           
+            
+            <button>Hire me</button>
+        </div>
+    </div>
+    <div id="about">
+    <div id="me">
+        <h2>About Me</h2>
+        <p>Hello, I'm Gaddam Aswini, a passionate and motivated student with a keen interest in web development.<br>
+             I am currently pursuing my studies in Tirupathi at Sree Vidyanikethan Engineering College.<br>
+              I am constantly expanding my skills to stay updated with the latest technologies.</p>
+              
+        
+        <p>Aside from coding, I enjoy to read mythological books and love to listen music.
+             I believe in continuous learning and always strive to improve my skills to solve real-world problems through innovative solutions.</p>
+             <hr><br>
+        <h2>
+            Education details:
+        </h2>
+        <p>
+            <ul type="disc">
+           <li>Completed my formative years at "Sree Sharada Jyothi English Medium School,Gospadu", where I cultivated a robust academic foundation and actively engaged in diverse extracurricular pursuits.</li>
+           <li>Graduated with distinction from Saptagiri High School, Koilkuntla, showcasing prowess in a spectrum of subjects and a commitment to excellence.</li>
+            <li>Attained an exceptional "10 CGPA" in the 10th-grade examinations, underscoring a consistent dedication to scholastic pursuits.</li>
+            <li>Successfully navigated the complexities of higher education at "Narayana Junior College, Kurnool", culminating in a remarkable " 96.6% " in the 12th-grade board examinations.</li>
+            <li>Currently pursuing a Bachelor's degree in" Computer Science and Systems Engineering" at "Sree Vidyanikethan Engineering College,Tirupati", with an expected graduation date in 2025.</li>
+            <li>Collaborating with peers on various projects, honing teamwork and communication skills.</li>
+            </ul>
+        </p>
+        </div>
+    </div>
+    
+    <div id="projects-section">
+        <h1>My Projects</h1>
+        <h3>Explore some of my work below</h3>
+        <h2>Project 1: Charity Management System</h2>
+        <h3><u>Abstract</u></h3>
+        <p id="text">The Charity Management System (CMS) is a comprehensive and user-friendly software solution designed to streamline and enhance the efficiency of charitable organizations in their day-to-day operations. This system aims to address the diverse needs of charity administrators, donors, and beneficiaries by providing a centralized platform for managing donations, events, volunteers, and financial transactions.
+            The CMS facilitates seamless communication and collaboration among stakeholders, enabling charities to better connect with their supporters and optimize resource allocation. Key features of the system include an intuitive donor management module, which allows organizations to track and acknowledge contributions, a volunteer coordination system for efficient event planning and execution, and robust financial tracking to ensure transparency and accountability.
+            In addition, the CMS incorporates data analytics tools to help charities gain insights into donor behaviors, identify trends, and make informed decisions for future campaigns. The system is designed with scalability in mind, allowing charities to adapt and grow as their operations expand.
+            Overall, the Charity Management System empowers charitable organizations to focus on their mission by providing a reliable and integrated platform that simplifies administrative tasks, enhances donor engagement, and ensures the effective utilization of resources for the greater good.</p>
+        <h2>Project 2: Doctor for your Crop</h2>
+        <h3><u>Abstract</u></h3>
+        <p id="text">"Doctor for Your Crop" is an advanced mobile application designed to revolutionize the agricultural sector by combining intelligent crop disease diagnosis with a convenient home delivery system for pesticides. The app empowers farmers to identify and address plant infections swiftly, offering a seamless experience that includes the delivery of the prescribed pesticides directly to their doorstep.
+            Utilizing state-of-the-art image recognition and artificial intelligence technologies, the application allows farmers to capture images of their affected crops. The system then analyzes the images to identify the specific type of infection and provides detailed information about the disease, along with recommended treatment options. To further simplify the process, the app seamlessly integrates with a pesticide delivery service.
+            Upon diagnosis, the app not only guides farmers on the appropriate treatment but also facilitates the immediate purchase and home delivery of the recommended pesticides. This ensures that farmers can take swift action to protect their crops without the need for time-consuming trips to agricultural supply stores. The pesticide delivery service is optimized for efficiency, ensuring timely access to the necessary resources.
+            "Doctor for Your Crop" also incorporates features such as weather updates, disease alerts, and optimal treatment schedules to enhance the overall effectiveness of crop management. The user-friendly interface makes the app accessible to farmers of all technological backgrounds, promoting widespread adoption.
+            By combining accurate disease diagnosis with a convenient home delivery system, this application aims to empower farmers, minimize crop losses, and foster sustainable agricultural practices. "Doctor for Your Crop" represents a holistic approach to crop care, leveraging technology to streamline the entire process from diagnosis to treatment, ultimately contributing to increased agricultural productivity and improved livelihoods for farmers.</p>
+        
+    </div>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            
+            <div class="skill">
+                <img id="img1" src="html5.png"><br><br>
+                <i class="fab fa-html5"></i>
+                <p>HTML5</p>
+               
+            </div>
+            <div class="skill">
+                <img id="img1" src="css.png"><br><br>
+                <i class="fab fa-css3-alt"></i>
+                <p>CSS3</p>
+            </div>
+            <div class="skill">
+                <i class="fab fa-js"></i>
+                <img id="img1" src="JavaScript-Logo.png">
+                <p>JavaScript</p>
+            </div>
+            <div class="skill">
+                <img id="img1" src="nodejs.png"><br><br>
+                <i class="fab fa-node"></i>
+                <p>Node.js</p>
+            </div>
+            <div class="skill">
+                <img id="img1" src="python.png"><br><br>
+                <i class="fab fa-python"></i>
+                <p>Python</p>
+            </div>
+            <div class="skill">
+                <img id="img1" src="java.png"><br><br>
+                <i class="fab fa-python"></i>
+                <p>Java</p>
+            </div>
+        </div>
+    </section>
+    
+    <div id="container">
+        <h1>Recommendations</h1>
+        <div class="recommendations">
+            <div class="recommendation-card">
+                <h3>John Doe</h3>
+                <p>"Aswini is a very quick learner and quickly grasps key concepts of web development. She got a great attitude and she is an excellent team player."</p>
+            </div>
+            <div class="recommendation-card">
+                <h3>Jane Smith</h3>
+                <p>"Working with Aswini has been an awesome experience.She is highly knowledgable and always the extra step to make sure everything is right."</p>
+            </div>
+            <div class="recommendation-card">
+                <h3>Mike Johnson</h3>
+                <p>"I had work along with Aswini during the intial phase of our venture which needed web development.She is a commited resource who has in depth knowledge in the domain."</p>
+            </div>
+            <div class="recommendation-card">
+                <h3>Don Mask</h3>
+                <p>"Aswini is a very quick learner and quickly grasps key concepts of web development.She is highly knowledgable and always the extra step to make sure everything is right."</p>
+            </div>
+        </div>
+        <h1>Leave a Recommendation</h1>
+            <form id="recommendationForm">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div><br>
+               
+                <div class="form-group">
+                    <label for="recommendation">Your Recommendation:</label><br>
+                    <textarea id="recommendation" name="recommendation" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+                
+            </form>
+            <img  id="homeicon" src="arrow.png">
+            <div id="popup" class="popup">
+                <span class="close">&times;</span>
+                <p>Thank you for your recommendation!</p>
+                <button>OK</button>
+            </div>
+        
+            <script src="script.js"></script>
+            
+    </div>
+    
+
+   
+    <footer>
+        &copy; 2024 Aswini Gaddam | Portfolio
+    </footer>
+    
+</body>
+</html>
